@@ -58,9 +58,24 @@ document.addEventListener("DOMContentLoaded", () => {
     button.innerText = "Like"
 
     //button functionality
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
       toy.likes += 1;
-      console.log(toy.likes);
+      toyLikes = event.target.previousElementSibling;
+      let configObj = {
+        method: "PATCH", 
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': "application/json"
+        },
+        body: JSON.stringify({
+          "likes": toy.likes
+        })
+      }
+      fetch(`http://localhost:3000/toys/${toy.id}`, configObj)
+      .then(resp => resp.json())
+      .then(() => {
+        toyLikes.innerText = `${toy.likes} Likes`
+        })
     })
 
     //append
@@ -88,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("http://localhost:3000/toys", configObj)
       .then(resp => resp.json())
       .then(function(toy) {
-        // !!! where does the toy object get it's id?
         toy.likes = 0
         renderToy(toy)
         let nameBox = document.getElementsByName("name")[0];
@@ -102,12 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
   };
-
-
-  //like a toy
-  function likeToy() {
-
-  }
 
 
   

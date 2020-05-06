@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 10
     },
     {
       "id": 2,
@@ -47,6 +47,16 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "dog",
+      "image": "https://www.ikea.com/us/en/images/products/gosig-golden-soft-toy__0710164_PE727367_S5.JPG?f=s",
+      "id": 9
+    },
+    {
+      "name": "dog 2",
+      "image": "https://www.ikea.com/us/en/images/products/gosig-golden-soft-toy__0710164_PE727367_S5.JPG?f=s",
+      "id": 10
     }
   ]
 }
