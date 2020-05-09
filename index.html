@@ -15,12 +15,12 @@
     </div>
 
     <div class="container">
-      <form class="add-toy-form">
+      <form class="add-toy-form" action="http://localhost:3000/toys" method="POST">
         <h3>Create a toy!</h3>
-
         <input
           type="text"
           name="name"
+          id="newName"
           value=""
           placeholder="Enter a toy's name..."
           class="input-text"
@@ -29,6 +29,7 @@
         <input
           type="text"
           name="image"
+          id="newImage"
           value=""
           placeholder="Enter a toy's image URL..."
           class="input-text"
