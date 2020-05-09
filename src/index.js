@@ -94,3 +94,6 @@ function addToyForm(){
       })
       //TODO: clear form
   }
+
+  //TODO: INCREASE TOYS LIKES..
+  
