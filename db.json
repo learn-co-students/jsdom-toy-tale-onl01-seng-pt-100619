@@ -47,6 +47,29 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "daisy",
+      "image": "https://i.imgur.com/kppfdxx.jpg",
+      "id": 9
+    },
+    {
+      "name": "oreo",
+      "image": "https://i.imgur.com/kppfdxx.jpg",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": "plant1",
+      "image": "https://i.imgur.com/wYTCtRu.jpg",
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "name": "plant1",
+      "image": "https://i.imgur.com/wYTCtRu.jpg",
+      "likes": 0,
+      "id": 12
     }
   ]
 }

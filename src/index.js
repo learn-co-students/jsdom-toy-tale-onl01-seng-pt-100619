@@ -3,6 +3,8 @@ let addToy = false;
 document.addEventListener("DOMContentLoaded", () => {
   addToyForm()
   fetchToys()
+  const toyForm = document.querySelector(".add-toy-form")
+  toyForm.addEventListener('submit', postToy)
 });
 
 function addToyForm(){
@@ -57,12 +59,38 @@ function addToyForm(){
     likeBtn.innerText = "Like <3"
     card.appendChild(likeBtn)
     
-
-    
-
-
-
-
     //add card to collection
     toyCollection.appendChild(card)
+  }
+
+  function postToy(event){
+    event.preventDefault()
+    const name = event.target.name.value
+    const imgUrl = event.target.image.value
+    const formData = {
+      name: name,
+      image: imgUrl,
+      likes: 0
+    }
+
+    const configObj = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    }
+
+
+    fetch ('http://localhost:3000/toys', configObj)
+      .then((resp) => resp.json())
+      .then((obj) => {
+        //render to page
+        createToyCard(obj)
+      })
+      .catch((error) => {
+        console.log(error.message)
+      })
+      //clear form
   }
