@@ -93,7 +93,7 @@ addBtn.addEventListener('click', () => {
   }
 })
 
-start by getting all toys
+// start by getting all toys
 
 getToys().then(toys => {
   toys.forEach(toy => {
