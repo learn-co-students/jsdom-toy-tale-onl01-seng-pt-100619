@@ -77,10 +77,8 @@ function renderToys(toy) {
   divCollect.append(divCard)
 }
 
-
-// add listener to 'Add Toy' button to show or hide form
 addBtn.addEventListener('click', () => {
-  // hide & seek with the form
+
   addToy = !addToy
   if (addToy) {
     toyForm.style.display = 'block'
@@ -92,8 +90,6 @@ addBtn.addEventListener('click', () => {
     toyForm.style.display = 'none'
   }
 })
-
-// start by getting all toys
 
 getToys().then(toys => {
   toys.forEach(toy => {
